@@ -17,7 +17,7 @@ public class Timer extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html"); // riceverai come risposta un HTML
         response.setCharacterEncoding("utf-8");
         try (PrintWriter writer = response.getWriter()) {
             writer.println("<!DOCTYPE html><html>");

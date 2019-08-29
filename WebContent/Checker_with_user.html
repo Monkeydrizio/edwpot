@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Checker with user</title>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script type='text/javascript'>
+	$(function() {
+		$('#Send2').click(function() {
+			$('#target').load("/edwpot/s08/CheckerWithUser?par=" + $('#inputex2').val());
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<h1>Please type down below the word you want to check, cheers :</h1>
+
+	<form action='/edwpot/s08/checker' method='get'>
+		<input type='text' id='inputex' name='user'>
+		<button type='submit' id='submit'>Send</button>
+	</form>
+
+	<h1>Do it again please:</h1>
+
+	<input type='text' id=inputex2>
+	<button id='Send2'>Send again</button>
+	<p id='target'></p>
+
+</body>
+</html>

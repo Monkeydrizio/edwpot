@@ -18,17 +18,18 @@ public class Checker extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String user = request.getParameter("user");
+        String user = request.getParameter("user"); //(*)
         Set<Character> set = new TreeSet<>();
         if (user != null) {
             for (char c : user.toCharArray()) {
                 set.add(Character.toLowerCase(c));
             }
         }
-        request.setAttribute("set", set);
+        request.setAttribute("set", set); // attenzione, quello su cui lavora l'utente sono parametri(*) quelli su cui lavoro io sono attributi
 
         RequestDispatcher rd = request.getRequestDispatcher("/s08/checker.jsp");
         rd.forward(request, response);
+        
     }
 
     @Override

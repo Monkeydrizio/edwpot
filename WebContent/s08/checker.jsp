@@ -12,7 +12,7 @@
         The user name
         <%
             @SuppressWarnings("unchecked")
-            Set<Character> set = (Set<Character>) request.getAttribute("set");
+            Set<Character> set = (Set<Character>) request.getAttribute("set"); // è un downcast non checked e quindi in riga 14 facciamo il suppreseWarning e diciamo al compilatore di fidarsi di noia
             if (set == null || set.isEmpty()) {
                 out.print("is empty");
             } else {

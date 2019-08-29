@@ -8,7 +8,7 @@
 <body>
     <h1>
         <%
-            out.print(LocalTime.now());
+            out.print(LocalTime.now());  //out è la pagina stessa
         %>
     </h1>
 </body>
