@@ -8,57 +8,57 @@
     <script src=".\js\jquery-3.4.1.min.js"></script>
  -->
 <script type="text/javascript">
-    $(function() {
-        $('#btnPlain').click(function() {
-            $.ajax({
-                url : "s07.txt",
-                success : function(data) {
-                    $('#targetPlain').text(data);
-                }
-            })
-        })
+	$(function() {
+		$('#btnPlain').click(function() {
+			$.ajax({ // vuole un oggetto e in javascript li possiamo creare al volo dando i parametri(variabili e funzioni)
+				url : "s07.txt", // è l'indirizzo della risorsa, può essere un file html, una servelet etc..
+				success : function(data) { // il success è il 200! (duscento per il baldi ahah) quindi se la risposta è positiva, la risorsa c'è elaboro la risposta con al funzione specificata
+					$('#targetPlain').text(data); // data è la nostra risposta, che può essere cose diverse in base a cosa ho messo nell'url
+				}
+			})
+		})
 
-        $('#btnLoad').click(function() {
-            $('#targetLoad').load('s07.txt');
-        });
+		$('#btnLoad').click(function() { // load butta dentro la risposta come testo
+			$('#targetLoad').load('s07.txt');
+		});
 
-        $('#btnLoadSrv').click(function() {
-            $('#targetLoadSrv').load('/edwpot/s07/timerPlain'); // la tradizione per le servlets è scrivere il nome del file senza estensione. In teoria qst regola vale per tutti i file per rendere più difficile il lavoro ad un Hacker.
-        });
+		$('#btnLoadSrv').click(function() {
+			$('#targetLoadSrv').load('/edwpot/s07/timerPlain'); // la tradizione per le servlets è scrivere il nome del file senza estensione. In teoria qst regola vale per tutti i file per rendere più difficile il lavoro ad un Hacker.
+		});
 
-        $('#btnGetSrv').click(function() {
-            $.get('/edwpot/s07/timerPlain', function(data) {
-                $('#targetGetSrv').val(data);
-            });
-        });
-    });
+		$('#btnGetSrv').click(function() { // La funzione get e la funzione post sono più flessibili, nella function posso specificare come elaborare la risposta. Sulla get come scrivere i parametri della request come stringa nell'URL della risorsa, nella post devo specificarli per forza come parametri della funzione $.('').post
+			$.get('/edwpot/s07/timerPlain', function(data) {
+				$('#targetGetSrv').val(data);
+			});
+		});
+	});
 </script>
 </head>
 <body>
-    <h1>Using AJAX via JQuery</h1>
+	<h1>Using AJAX via JQuery</h1>
 
-    <p>
-        Back to <a href=".\index.html">home</a>
-    </p>
+	<p>
+		Back to <a href=".\index.html">home</a>
+	</p>
 
-    <div>
-        <button id="btnPlain">Plain Ajax call</button>
-        <span id="targetPlain">Target for Ajax</span>
-    </div>
+	<div>
+		<button id="btnPlain">Plain Ajax call</button>
+		<span id="targetPlain">Target for Ajax</span>
+	</div>
 
-    <div>
-        <button id="btnLoad">Load text</button>
-        <span id="targetLoad">Target for load</span>
-    </div>
+	<div>
+		<button id="btnLoad">Load text</button>
+		<span id="targetLoad">Target for load</span>
+	</div>
 
-    <div>
-        <button id="btnLoadSrv">Load from servlet</button>
-        <span id="targetLoadSrv">Target for load servlet</span>
-    </div>
+	<div>
+		<button id="btnLoadSrv">Load from servlet</button>
+		<span id="targetLoadSrv">Target for load servlet</span>
+	</div>
 
-    <div>
-        <button id="btnGetSrv">GET servlet</button>
-        <input id="targetGetSrv">
-    </div>
+	<div>
+		<button id="btnGetSrv">GET servlet</button>
+		<input id="targetGetSrv">
+	</div>
 </body>
 </html>
