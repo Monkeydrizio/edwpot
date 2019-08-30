@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Alfy Pap Rulez!</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- STILE -->
+<style>
+#carrello {
+	border: 3px solid blue;
+	margin: 2px;
+	padding: 2px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#basket {
+	color: green;
+}
+</style>
+
+<!--  AJAX -->
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$("#compra").clik(function(){
+		if ($("altamura").val() !== null){
+			let p1 "v1=" + $("altamura").val();
+		}
+		if ($("#lucine").val() !== null){
+			let p2 "v1=" + $("#lucine").val();
+		}
+		if ($("#spiegato").val() !== null){
+			let p3 "v1=" + $("#spiegato").val();
+		}
+		if ($("#informatico").val() !== null){
+			let p4 "v1=" + $("#informatico").val();
+		}
+		if ($("#energetica").val() !== null){
+			let p5 "v1=" + $("#energetica").val();
+		}
+		
+		$("#basket").load("/edwpot/AlfyPapRul?" + p1 + p2 + p3 + p4 + p5)
+		
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+})</script>
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col"></div>
+			<div class="col">
+				<h3>Benvenuto sullo store ufficiale di:</h3>
+			</div>
+			<div class="col"></div>
+
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div id="carrello">
+					<span>Totale vinili nel carrello:</span> <span id="basket"></span>
+				</div>
+
+			</div>
+			<div class="col">
+				<h1>ALFY PAP RULEZ!</h1>
+			</div>
+			<div class="col"></div>
+		</div>
+
+		<div class="row">
+			<div class="col"></div>
+			<div class="col">
+				<h4>shit music band</h4>
+			</div>
+			<div class="col"></div>
+		</div>
+
+		<div class="row">
+			<div class="col"></div>
+			<div class="col">
+				<h4>Acquista i nostri fantastici vinili!!</h4>
+			</div>
+			<div class="col">
+				<h3>Quante copie desideri acquistare?</h3>
+			</div>
+		</div>
+
+		<div class="row"></div>
+
+		<div class="row">
+			<!-- Altamura caput mundi -->
+
+			<div class="col">
+				<h4>Altamura caput mundi</h4>
+			</div>
+
+			<div class="col">
+				<p>--------></p>
+			</div>
+
+			<div class="col">
+				<input type="text" id="altamura">
+			</div>
+
+		</div>
+
+		<div class="row">
+			<!-- Le lucine dei cinesi  -->
+
+			<div class="col">
+				<h4>Le lucine dei cinesi</h4>
+			</div>
+
+			<div class="col">
+				<p>--------></p>
+			</div>
+
+			<div class="col">
+				<input type="text" id="lucine">
+			</div>
+
+		</div>
+
+		<div class="row">
+			<!-- Vorrei essere spiegato -->
+
+			<div class="col">
+				<h4>Vorrei essere spiegato</h4>
+			</div>
+
+			<div class="col">
+				<p>--------></p>
+			</div>
+
+			<div class="col">
+				<input type="text" id="spiegato">
+			</div>
+
+		</div>
+
+		<div class="row">
+			<!-- Meglio un informatico oggi che un Rizio domani Energetica? -->
+
+			<div class="col">
+				<h4>Meglio un informatico oggi che un Rizio domani</h4>
+			</div>
+
+			<div class="col">
+				<p>--------></p>
+			</div>
+
+			<div class="col">
+				<input type="text" id="informatico">
+			</div>
+
+		</div>
+
+		<div class="row">
+			<!-- Energetica? -->
+
+			<div class="col">
+				<h4>Energetica?</h4>
+			</div>
+
+			<div class="col">
+				<p>--------></p>
+			</div>
+
+			<div class="col">
+				<input type="text" id="energetica">
+			</div>
+
+		</div>
+
+		<!-- PULSANTI -->
+		<div class="row">
+			<button id="compra" class="btn btn-secondary btn-lg btn-block">AGGIUNGI AL CARRELLO</button>
+		</div>
+		<form action="/edwpot/AlfyPapRul?done">
+		<div class="row">
+			<button type="submit" id="conferma" class="btn btn-primary btn-lg btn-block">COMPRA</button>
+		</div>
+		</form>
+
+	</div>
+
+
+
+</body>
+</html>
