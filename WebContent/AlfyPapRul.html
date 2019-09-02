@@ -32,27 +32,27 @@ $(function(){
 	
 	$("#compra").clik(function(){
 		if ($("altamura").val() !== null){
-			let p1 "v1=" + $("altamura").val();
+			let p1 = "v1=" + $("altamura").val();
 		}
 		if ($("#lucine").val() !== null){
-			let p2 "v2=" + $("#lucine").val();
+			let p2 = "v2=" + $("#lucine").val();
 		}
 		if ($("#spiegato").val() !== null){
-			let p3 "v3=" + $("#spiegato").val();
+			let p3 = "v3=" + $("#spiegato").val();
 		}
 		if ($("#informatico").val() !== null){
-			let p4 "v1=" + $("#informatico").val();
+			let p4 = "v1=" + $("#informatico").val();
 		}
 		if ($("#energetica").val() !== null){
-			let p5 "v4=" + $("#energetica").val();
+			let p5 = "v4=" + $("#energetica").val();
 		}
 		
 		$("#basket").load("/edwpot/AlfyPapRul?" + p1 + p2 + p3 + p4 + p5)
 		
-		}
-	}	
+		})
+	})	
 	
-})</script>
+</script>
 
 
 
@@ -117,7 +117,7 @@ $(function(){
 			</div>
 
 			<div class="col">
-				<input type="text" id="altamura">
+				<input type="number" id="altamura">
 			</div>
 
 		</div>
@@ -134,7 +134,7 @@ $(function(){
 			</div>
 
 			<div class="col">
-				<input type="text" id="lucine">
+				<input type="number" id="lucine">
 			</div>
 
 		</div>
@@ -151,7 +151,7 @@ $(function(){
 			</div>
 
 			<div class="col">
-				<input type="text" id="spiegato">
+				<input type="number" id="spiegato">
 			</div>
 
 		</div>
@@ -168,7 +168,7 @@ $(function(){
 			</div>
 
 			<div class="col">
-				<input type="text" id="informatico">
+				<input type="number" id="informatico">
 			</div>
 
 		</div>
@@ -185,7 +185,7 @@ $(function(){
 			</div>
 
 			<div class="col">
-				<input type="text" id="energetica">
+				<input type="number" id="energetica">
 			</div>
 
 		</div>

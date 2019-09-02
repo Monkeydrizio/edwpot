@@ -10,8 +10,10 @@
     <h1>Hello!</h1>
 
     <!-- JavaBean accessed through scriptlet -->
+    <%-- 
     <div>
         <!-- calling toString() implicitly -->
+        
         <span>User is <%=request.getAttribute("user")%></span>
     </div>
     <div>
@@ -20,6 +22,8 @@
         %>
         User is <span><%=usr.getName()%>, <%=usr.getId()%></span>
     </div>
+        
+    --%>
 
     <!-- JavaBean accessed through standard action -->
     <jsp:useBean id="user" class="dd.User" scope="request">
