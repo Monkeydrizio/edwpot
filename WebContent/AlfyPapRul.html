@@ -35,28 +35,22 @@ $(function(){
 			let p1 "v1=" + $("altamura").val();
 		}
 		if ($("#lucine").val() !== null){
-			let p2 "v1=" + $("#lucine").val();
+			let p2 "v2=" + $("#lucine").val();
 		}
 		if ($("#spiegato").val() !== null){
-			let p3 "v1=" + $("#spiegato").val();
+			let p3 "v3=" + $("#spiegato").val();
 		}
 		if ($("#informatico").val() !== null){
 			let p4 "v1=" + $("#informatico").val();
 		}
 		if ($("#energetica").val() !== null){
-			let p5 "v1=" + $("#energetica").val();
+			let p5 "v4=" + $("#energetica").val();
 		}
 		
 		$("#basket").load("/edwpot/AlfyPapRul?" + p1 + p2 + p3 + p4 + p5)
 		
 		}
-	}
-	
-	
-	
-	
-	
-	
+	}	
 	
 })</script>
 
@@ -201,9 +195,9 @@ $(function(){
 			<button id="compra" class="btn btn-secondary btn-lg btn-block">AGGIUNGI AL CARRELLO</button>
 		</div>
 		<form action="/edwpot/AlfyPapRul?done">
-		<div class="row">
-			<button type="submit" id="conferma" class="btn btn-primary btn-lg btn-block">COMPRA</button>
-		</div>
+			<div class="row">
+				<button type="submit" id="conferma" class="btn btn-primary btn-lg btn-block">COMPRA</button>
+			</div>
 		</form>
 
 	</div>
