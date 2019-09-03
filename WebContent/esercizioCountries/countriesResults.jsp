@@ -79,7 +79,9 @@ shrink-to-fit=no">
 
 		<div class="row"></div>
 
-		<c:if test="${(countries != null) && (countries.isEmpty() == false)}">
+		<%-- c:if test="${(countries != null) && (countries.isEmpty() == false)}" --%>
+		<c:if test="${(countries != null)}">
+
 			<div class="row mytab">
 				<table class="table table-dark">
 					<tr>
